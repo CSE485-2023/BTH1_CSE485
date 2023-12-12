@@ -1,5 +1,16 @@
-<?php include '../header_ad.php'; ?>
+<?php include '../header_ad.php';
+?>
 
+<?php
+if($_GET['action']==='create') {
+include "../controllers/StoryController.php";
+$controller2 = new StoryController();
+$categories = $controller2->getCategories();
+$authors = $controller2->getAuthors();
+
+}
+
+?>
     <main class="container mt-5 mb-5">
         <div class="row">
             <div class="col-sm">

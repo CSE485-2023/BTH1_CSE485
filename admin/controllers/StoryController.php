@@ -1,5 +1,5 @@
 <?php
-            session_start();
+           // session_start();
 require_once '../model/StoryModel.php';
 require_once '../model/AuthorModel.php';
 require_once '../model/CategoryModel.php';
@@ -40,6 +40,14 @@ class StoryController {
         $this->authorModel = new AuthorModel();
         $this->categoryModel = new CategoryModel();
     }
+
+    public function getAuthors() {
+        return  $this->authorModel->listAuthors();
+    }
+
+    public function getCategories() {
+        return $this->categoryModel->listCategories();
+    }
     public function get() {
         $id = $_GET['id'];
             $story= $this->storyModel->get($id);
@@ -73,9 +81,9 @@ class StoryController {
             header('Location: ?action=list_story');
             exit();
         } else {
-            $authors = $this->authorModel->listAuthors();
-            $categories = $this->categoryModel->listCategories();
-            include '../views/story_form.php';
+//            $authors = $this->authorModel->listAuthors();
+//            $categories = $this->categoryModel->listCategories();
+//            include '../views/story_form.php';
         }
     }
 
