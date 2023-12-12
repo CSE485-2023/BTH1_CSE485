@@ -82,7 +82,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `full_name`, `birth`, `phone`
 -- --------------------------------------------------------
 
 --
--- Structure for view `vw_music`
+-- Structure for views `vw_music`
 --
 DROP TABLE IF EXISTS `vw_music`;
 

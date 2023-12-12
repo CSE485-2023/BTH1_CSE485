@@ -3,7 +3,7 @@
     <main class="container mt-5 mb-5">
         <div class="row">
             <?php
-            require_once "../common/connect.php";
+            require_once "./database/connect.php";
 
             $conn = connectDB();
 

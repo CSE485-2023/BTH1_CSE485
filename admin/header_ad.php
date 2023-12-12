@@ -1,4 +1,4 @@
-<?php session_start();
+<?php
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'index.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" aria-current="page" href="./">Trang chủ</a>
+                        <a class="nav-link" aria-current="page" href="http://localhost:63342/btth01/admin/">Trang chủ</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'category.php') !== false && strpos($_SERVER['PHP_SELF'], 'category.php') !== false) ? 'active fw-bold' : ''; ?>">
                         <a class="nav-link" href="category.php">Thể loại</a>
@@ -45,20 +45,20 @@
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'article.php') !== false) ? 'active fw-bold' : ''; ?>">
                         <a class="nav-link" href="article.php">Bài viết</a>
                     </li>
-                    <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'user.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="user.php">Người dùng</a>
+                    <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'UserController.php') !== false && $_GET['action'] === 'list_user') ? 'active fw-bold' : ''; ?>">
+                        <a class="nav-link" href="/btth01/admin/controllers/UserController.php?action=list_user">Người dùng</a>
                     </li>
-                    <li class="nav-item dropdown">
-                            <span class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Hello, <?= $_SESSION['userActive']['full_name'] ?>
-                            </span>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="../handle_logout.php">Logout</a></li>
-                        </ul>
-                    </li>
+<!--                    <li class="nav-item dropdown">-->
+<!--                            <span class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                Hello, --><?php //= $_SESSION['userActive']['full_name'] ?>
+<!--                            </span>-->
+<!--                        <ul class="dropdown-menu">-->
+<!--                            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--                            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--                            <li><hr class="dropdown-divider"></li>-->
+<!--                            <li><a class="dropdown-item" href="../handle_logout.php">Logout</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
                 </ul>
             </div>
         </div>

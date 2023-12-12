@@ -106,8 +106,8 @@ CREATE TABLE `users` (
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `vw_music`
--- (See below for the actual view)
+-- Stand-in structure for views `vw_music`
+-- (See below for the actual views)
 --
 CREATE TABLE `vw_music` (
 `ma_bviet` int(10) unsigned
@@ -126,7 +126,7 @@ CREATE TABLE `vw_music` (
 -- --------------------------------------------------------
 
 --
--- Structure for view `vw_music`
+-- Structure for views `vw_music`
 --
 DROP TABLE IF EXISTS `vw_music`;
 
@@ -264,7 +264,7 @@ WHERE (tieude LIKE '%thương%' OR ten_bhat LIKE '%thương%')
 
 
 
- -- Tạo 1 view có tên vw_Music để hiển thị thông tin về Danh sách các bài viết kèm theo Tên thể loại và tên tác giả
+ -- Tạo 1 views có tên vw_Music để hiển thị thông tin về Danh sách các bài viết kèm theo Tên thể loại và tên tác giả
 CREATE VIEW vw_Music AS
 SELECT baiviet.*, tacgia.ten_tgia, theloai.ten_tloai
 FROM baiviet join tacgia on tacgia.ma_tgia = baiviet.ma_tgia

@@ -7,7 +7,7 @@ $conn = connectDB();
         $stmt = $conn->prepare($sqlCheck);
         $stmt->execute();
         $rowCount = $stmt->fetchColumn();
-        echo "<script>alert($rowCount)</script>";
+
         if ($rowCount > 0) {
             session_start();
             $_SESSION['notify_category_violation'] = "Category has been referenced by some stories, so you cannot delete it.";
