@@ -37,13 +37,13 @@
                         <a class="nav-link" aria-current="page" href="http://localhost:63342/btth01/admin/">Trang chủ</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'category.php') !== false && strpos($_SERVER['PHP_SELF'], 'category.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="category.php">Thể loại</a>
+                        <a class="nav-link" href="/btth01/admin/controllers/CategoryController.php?action=list_category">Thể loại</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'author.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="author.php">Tác giả</a>
+                        <a class="nav-link" href="/btth01/admin/controllers/AuthorController.php?action=list_author">Tác giả</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'article.php') !== false) ? 'active fw-bold' : ''; ?>">
-                        <a class="nav-link" href="article.php">Bài viết</a>
+                        <a class="nav-link" href="/btth01/admin/controllers/StoryController.php?action=list_story">Bài viết</a>
                     </li>
                     <li class="nav-item <?php echo (strpos($_SERVER['PHP_SELF'], 'UserController.php') !== false && $_GET['action'] === 'list_user') ? 'active fw-bold' : ''; ?>">
                         <a class="nav-link" href="/btth01/admin/controllers/UserController.php?action=list_user">Người dùng</a>

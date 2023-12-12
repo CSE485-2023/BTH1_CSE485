@@ -48,7 +48,7 @@
 
                     <div class="form-group float-end">
                         <input type="submit" value="Lưu" class="btn btn-success">
-                        <a href="list_user.php" class="btn btn-warning">Quay lại</a>
+                        <a href="../controllers/UserController.php?action=list_user" class="btn btn-warning">Quay lại</a>
                     </div>
                 </form>
             </div>
